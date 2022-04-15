@@ -49,7 +49,6 @@ public class BankAccount
                 this.checkingBalance -= value;
             }
         }
-
         if(account.equals("Savings"))
         {
             if(this.savingsBalance - value >= 0)
