@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.container
+{
+	width:35%;
+	height:500px;
+	background-color:#0080c0;
+	margin-left:400px;
+	border:solid;
+	border-color: black;
+}
+
+h3
+{
+	text-align:center;
+}
+
+a
+{
+	padding:15px;
+	margin-left:50%;
+}
