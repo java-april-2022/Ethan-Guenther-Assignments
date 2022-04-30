@@ -39,12 +39,12 @@ private final ExpenseRepository expenseRepository;
 		}
 	}
 	
-	public Expense updateExpense(Expense expense) 
+	public Expense update(Expense expense) 
 	{
 		return expenseRepository.save(expense);
 	}
 	
-	public void deleteExpense(Long id) 
+	public void delete(Long id) 
 	{
 		Optional<Expense> optionalExpense = expenseRepository.findById(id);
 		if(optionalExpense.isPresent())

@@ -8,33 +8,13 @@
     <link rel="stylesheet" href="/css/style.css">
 
     <meta charset="UTF-8" />
-    <title>Safe Travels</title>
+    <title>Edit Expense</title>
 </head>
 <body>
 
-<table>
-    <thead>
-        <tr>
-            <th>Expense</th>
-            <th>Vendor</th>
-            <th>Amount</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-		<c:forEach var="expense" items="${expenses}">
-			<tr>
-				<td><c:out value="${expense.name}"></c:out></td>
-				<td><c:out value="${expense.vendor}"></c:out></td>
-				<td><c:out value="${expense.amount}"></c:out></td>
-				<td><a href="/edit/${expense.id}">Edit</a></td>
-			</tr>	
-		</c:forEach>
-    </tbody>
-</table>
-
-	<h1>Add Expense</h1>
-	<form:form action="/" method="post" modelAttribute="expense">
+<h1>Edit Expense</h1>
+	<form:form action="/edit/${expense.id}" method="post" modelAttribute="expense">
+	    <input type="hidden" name="_method" value="put">
 		<div>
 			<form:label path="name">Name:</form:label>
 			<form:errors path="name"/>
@@ -59,6 +39,5 @@
 		<input type="submit" value="submit">
 		
 	</form:form>
-
 </body>
 </html>
