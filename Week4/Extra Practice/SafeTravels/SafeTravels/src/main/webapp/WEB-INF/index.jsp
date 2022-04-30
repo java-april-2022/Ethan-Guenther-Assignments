@@ -24,10 +24,15 @@
     <tbody>
 		<c:forEach var="expense" items="${expenses}">
 			<tr>
-				<td><c:out value="${expense.name}"></c:out></td>
+				<td><a href="show/${expense.id}">${expense.name}</a></td>
 				<td><c:out value="${expense.vendor}"></c:out></td>
 				<td><c:out value="${expense.amount}"></c:out></td>
 				<td><a href="/edit/${expense.id}">Edit</a></td>
+				<td><form action="/expenses/${expense.id}" method="post">
+    			<input type="hidden" name="_method" value="delete">
+    			<input type="submit" value="Delete">
+				</form>
+				</td>
 			</tr>	
 		</c:forEach>
     </tbody>
