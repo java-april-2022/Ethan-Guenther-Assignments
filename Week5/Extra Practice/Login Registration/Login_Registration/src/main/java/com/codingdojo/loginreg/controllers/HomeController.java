@@ -94,5 +94,11 @@ public class HomeController
 		model.addAttribute("user", userServ.findById(userId));
     	return "success.jsp";
     }
+    @GetMapping("/logout")
+    public String logout(HttpSession session)
+    {
+    	session.removeAttribute("userId");
+    	return "redirect:/";
+    }
     
 }

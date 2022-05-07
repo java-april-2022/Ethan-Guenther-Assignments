@@ -15,7 +15,7 @@
 
 	<h1>You have successfully logged in</h1>
 	<h2>Welcome, <c:out value="${user.userName}"></c:out>!</h2>
-	<a href="/">Logout</a>
+	<a href="/logout">Logout</a>
 
 </body>
 </html>
